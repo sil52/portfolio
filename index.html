@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>Portfolio</title>
+    <meta name="description" content="テキストテキストテキストテキストテキストテキスト">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="img/logo.png">
+    <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css">
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <header id="header">
+        <h1 class="site-title"><a href="index.html"><img src="img/logo.png" alt="Akama Aya"></a></h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#works">Works</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="main" class="main">
+        <div class="main-content">
+            <div class="image">
+                <img src="img/frame.png" alt="">
+            </div>
+            <div class="pic1">
+                <img src="img/pic1.png" alt="">
+            </div>
+            <div class="box">
+                <p class="name">AKAMA AYA</p>
+                <p class="title">Portfolio</p>           
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h1 class="site-title">About</h1>
+        <div class="about-content">
+            <img src="img/pic2.jpeg" alt="">
+            <div class="profile-info">
+                <p class="sec-title">my profile</p>
+                <ol class="profile">
+                    <li>赤間　綾</li>
+                    <li>1997年生まれ。福岡県出身</li>
+                    <li>福岡県出身。大学卒業後金融系企業に勤務</li>
+                    <li>webデザイン、コーディングできます</li>
+                    <li>ご気軽にご連絡ください </li>
+                </ol>
+                <p class="sec-title">SNS</p>
+                <div class="sns-icons">
+                    <a href="#"><img src="img/iconinsta.png" alt=""></a>
+                    <a href="#"><img src="img/iconx.png" alt=""></a>
+                    <a href="#"></a><img src="img/iconpinterest.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="works" class="works">
+        <h1 class="site-title">Works</h1>
+        <div class="works-image">
+            <img src="img/frame.png" alt="反転画像">
+        </div> 
+        <div class="gallery">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+        <div class="works-image">
+            <img src="img/frame.png" alt="反転画像">
+        </div>    
+    </section>
+
+    <section id="contact" class="contact">
+        <h1 class="site-title">Contact</h1>
+        <div class="contact-content">
+            <section id="contact" class="contact">
+                <form action="submit_form.php" method="POST" class="contact-form">
+                    <!-- 名前 -->
+                    <label for="name">お名前</label>
+                    <input type="text" id="name" name="name" placeholder="お名前を入力" required>
+            
+                    <!-- メールアドレス -->
+                    <label for="email">メールアドレス</label>
+                    <input type="email" id="email" name="email" placeholder="メールアドレスを入力" required>
+            
+                    <!-- メッセージ -->
+                    <label for="message">メッセージ</label>
+                    <textarea id="message" name="message" rows="5" placeholder="メッセージを入力" required></textarea>
+            
+                    <!-- 送信ボタン -->
+                    <button type="submit">送信</button>
+                </form>
+            </section>
+        </div>
+    </section>
+    
+</body>
+</html>
