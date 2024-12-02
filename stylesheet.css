@@ -1,0 +1,283 @@
+@charset "UTF-8";
+
+html {
+    font-size: 100%;
+}
+body {
+    color: #673f69;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+}
+li {
+    list-style: none;
+}
+section {
+    min-height: 600px; /* セクションの最低高さを600pxに設定 */
+    padding: 50px 20px; /* 上下50px、左右20pxの余白 */
+    align-items: center; /* 縦方向の中央揃え */
+    justify-content: center; /* 横方向の中央揃え */
+    text-align: center; /* テキストを中央揃え */
+}
+
+.site-title {
+    font-size: 96px;
+    padding: 1rem 0 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+.site-title a {
+    display: block;
+}
+.sec-title {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 65px;
+}
+
+/*----------------------------
+ヘッダー
+----------------------------*/
+#header {
+    max-width: 960px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    margin: 0 auto;
+    padding: 0 4%; /* パディング修正 */
+}
+#header ul {
+    display: flex;
+    padding: 10px 0;
+}
+#header li {
+    font-size: 0.9rem;
+    margin-left: 30px;
+}
+#header li a {
+    color: #673f69;
+}
+#header li a:hover {
+    opacity: 0.7;
+}
+#header li img.icon {
+    width: 20px;
+}
+
+/*-------------------------------
+メイン
+------------------------*/
+main {
+    position: relative;
+    margin-bottom: 80px;
+    height: auto; /* 高さを自動調整 */
+    min-height: 600px;
+    overflow: hidden; /* 子要素のはみ出しを防ぐ */
+}
+
+.main-content {
+    position: relative; /* 相対位置に変更 */
+    height: auto; /* 高さを自動調整 */
+}
+
+
+.image {
+    display: block; /* 画像をブロック要素として扱う */
+    margin: 0; /* 余白なし */
+    max-width: 100%; /* レスポンシブ対応 */
+    height: auto; /* 縦横比を維持 */
+    position: absolute; /* 左端に固定する場合 */
+    left: 0; /* 左端に配置 */
+}
+.pic1 {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    z-index: 1; /* 重なり順序を設定 */
+}
+.box {
+    background-color: #ffaf45;
+    width: 50%;
+    height: auto; /* 高さを自動調整 */
+    position: absolute;
+    top: 35%;
+    right: 0%;
+    text-align: center; /* テキスト中央寄せ */
+    padding: 20px; /* パディング追加 */
+}
+.name {
+    margin-top: 15px;
+    font-size: 64px;
+}
+.title {
+    font-size: 128px;
+    font-weight: bold;
+}
+
+/*-----------------------------
+About
+----------------------------*/
+.about {
+    background-color: #ffaf45; 
+}
+
+.about-content {
+    display: flex; /* 横並びに配置 */
+    align-items: flex-start; /* 上揃え */
+    margin: 0 auto; /* 中央寄せ */
+    max-width: 960px; /* 最大幅を設定 */
+    padding: 0 20px; /* 左右の余白を追加 */
+}
+
+.about-content img {
+    max-width: 400px; /* 最大幅を300pxに制限 */
+}
+
+.profile-info {
+    color: #F6F3F0;
+    text-align: left; /* テキスト左寄せ */
+}
+.profile {
+    margin-left: 20px;
+    margin-top: 50px; /* my profileを下に移動 */
+    margin-bottom: 65px;
+}
+
+.sns-icons {
+    display: flex; /* SNSアイコンも横並び */
+    justify-content: center; /* 中央に揃える */
+}
+
+.sns-icons img {
+    margin: 0 10px; /* アイコン間の余白 */
+    width: 40px; /* アイコンのサイズを大きく設定 */
+    height: 40px; /* アイコンの高さを設定 */
+}
+
+.works {
+    position: relative; /* 子要素の絶対配置用 */
+    height: 100vh; /* セクションを画面いっぱいに */
+    overflow: hidden; /* 子要素がセクション外に出ないようにする */
+}
+
+.works .works-image {
+    position: absolute; /* 親要素に対して絶対配置 */
+    bottom: 0%; /* 上端に配置 */
+    right: 0%; 
+    width: 100%; /* 幅を画面全体に広げる */
+    height: 100%; /* 高さを画面全体に広げる */
+    object-fit: cover; /* 画像をアスペクト比を保ちながら拡大縮小 */
+    z-index: -1; /* ギャラリーの背面に配置 */
+    transform: scaleX(-1) scaleY(-1); /* 上下左右反転 */
+}
+
+.works .gallery {
+    position: absolute; /* 親要素に対して絶対配置 */
+    top: 50%; /* セクションの中央に配置 */
+    left: 50%; /* セクションの中央に配置 */
+    transform: translate(-50%, -50%); /* 真ん中に揃える */
+    display: flex; /* フレックスボックスで並べる */
+    gap: 20px; /* アイテム間のスペース */
+    flex-wrap: wrap; /* レスポンシブ対応で折り返し可能に */
+    justify-content: center; /* アイテムを中央揃え */
+    z-index: 1; /* 背景画像の上に配置 */
+}
+
+.works .gallery .item {
+    background-color: #121212; /* 仮の背景色 */
+    padding: 20px;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.contact {
+    background-color: #ffaf45; 
+}
+
+.contact-content {
+    margin: 0 auto; /* 中央寄せ */
+    max-width: 960px; /* 最大幅を設定 */
+    padding: 0 20px; /* 左右の余白を追加 */
+}
+
+.contact-content img {
+    max-width: 500px;
+}
+
+/* 見出しスタイル */
+.contact h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* フォーム全体 */
+.contact-form {
+    max-width: 600px; /* フォームの最大幅 */
+    margin: 0 auto; /* 中央揃え */
+    display: flex;
+    flex-direction: column; /* 項目を縦並び */
+    gap: 15px; /* 各項目の間隔 */
+}
+
+/* 各入力欄のスタイル */
+.contact-form input,
+.contact-form textarea {
+    width: 100%; /* 親要素にフィット */
+    padding: 10px; /* 内側余白 */
+    border: 1px solid ; /* グレーの枠線 */
+    font-size: 16px; /* テキストサイズ */
+    box-sizing: border-box; /* ボックスサイズ調整 */
+    background-color: #fff; /* 入力欄の背景を白に */
+}
+
+/* ラベルのスタイル */
+.contact-form label {
+    font-size: 14px;
+    font-weight: bold; /* ラベルを太字に */
+    color: #F6F3F0;
+    margin-bottom: 5px;
+}
+
+/* ボタンのスタイル */
+.contact-form button {
+    background-color: #ffaf45; /* シンプルな黒背景 */
+    color: #F6F3F0;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer; /* クリック時にポインター表示 */
+    text-transform: uppercase; /* 文字を大文字に変換 */
+}
+
+/* ボタンホバー時 */
+.contact-form button:hover {
+    background-color: #673f69; /* ホバー時に背景色を濃く */
+}
+
+
+
+@media (max-width: 768px) {
+    .about .content, .contact .content {
+        flex-direction: column;
+    }
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .contact-form {
+        width: 90%; /* モバイルでフォーム幅を縮小 */
+    }
+}
