@@ -307,18 +307,42 @@ About
     color: #ddd; /* 少し薄い色 */
 }
 
-
-
-
+/*-----------------------------
+レスポンシブ対応
+-----------------------------*/
 @media (max-width: 768px) {
-    .about .content, .contact .content {
-        flex-direction: column;
+    html {
+        font-size: 1rem; /* 基本フォントサイズを縮小 */
     }
+
+    .site-title {
+        font-size: 64px;
+    }
+
+    .box {
+        width: 90%; /* 幅を広げる */
+        position: relative;
+        margin: 20px auto; /* 上下中央揃え */
+    }
+
+    .gallery {
+        flex-direction: column; /* 縦並びに変更 */
+        gap: 15px;
+    }
+
+    .work-item {
+        width: 100%; /* 幅を全体に広げる */
+        height: auto; /* 高さを自動調整 */
+    }
+
+    .contact-form {
+        width: 90%; /* 幅を縮小 */
+    }
+
     header nav ul {
-        flex-direction: column;
+        flex-direction: column; /* リンクを縦並び */
+        align-items: flex-start;
         gap: 10px;
     }
-    .contact-form {
-        width: 90%; /* モバイルでフォーム幅を縮小 */
-    }
+}
 }
