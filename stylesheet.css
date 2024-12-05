@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 html {
-    font-size: 100%;
+    font-size: 1.2rem;
 }
 body {
     color: #673f69;
@@ -15,14 +15,14 @@ img {
     max-width: 100%;
     height: auto; 
     display: block; 
-    margin: 0 auto; 
+    margin: 0; 
 }
 li {
     list-style: none;
 }
 section {
     min-height: 600px; /* セクションの最低高さを600pxに設定 */
-    padding: 50px 20px; /* 上下50px、左右20pxの余白 */
+    padding: 50px 0; /* 上下50px、左右20pxの余白 */
     align-items: center; /* 縦方向の中央揃え */
     justify-content: center; /* 横方向の中央揃え */
     text-align: center; /* テキストを中央揃え */
@@ -33,6 +33,7 @@ section {
     padding: 1rem 0 2rem;
     margin-bottom: 0.5rem;
     font-weight: bold;
+    letter-spacing: 0.05rem;
 }
 .site-title a {
     display: block;
@@ -41,6 +42,7 @@ section {
     font-size: 1.5rem;
     text-align: center;
     margin-bottom: 65px;
+    letter-spacing: 0.05rem;
 }
 
 /*----------------------------
@@ -52,7 +54,7 @@ section {
     justify-content: space-between;
     align-items: center;
     height: 100px;
-    margin: 0 auto;
+    margin: 0 ;
     padding: 0 4%; /* パディング修正 */
 }
 #header ul {
@@ -180,27 +182,51 @@ About
     transform: scaleX(-1) scaleY(-1); /* 上下左右反転 */
 }
 
-.works .gallery {
-    position: absolute; /* 親要素に対して絶対配置 */
-    top: 50%; /* セクションの中央に配置 */
-    left: 50%; /* セクションの中央に配置 */
-    transform: translate(-50%, -50%); /* 真ん中に揃える */
-    display: flex; /* フレックスボックスで並べる */
-    gap: 20px; /* アイテム間のスペース */
-    flex-wrap: wrap; /* レスポンシブ対応で折り返し可能に */
-    justify-content: center; /* アイテムを中央揃え */
-    z-index: 1; /* 背景画像の上に配置 */
+
+/* ギャラリー */
+.gallery {
+    display: flex; /* 横並び配置 */
+    justify-content: center; /* 中央揃え */
+    gap: 20px; /* ボックス間のスペース */
+    flex-wrap: wrap; /* 折り返し可能 */
+    margin: 0 auto;
 }
 
-.works .gallery .item {
-    background-color: #121212; /* 仮の背景色 */
-    padding: 20px;
-    width: 150px;
-    height: 150px;
+/* リンクボックス */
+.work-item {
+    display: flex; /* 内部要素の配置 */
+    flex-direction: column; /* 上下に並べる */
+    align-items: center; /* 中央揃え */
+    background-color: #fff;
+    border: 1px solid #ddd; /* 枠線 */
+    overflow: hidden;
+    width: 300px; /* 固定幅 */
+    height: 400px; /* 固定高さ */
+    text-decoration: none; /* 下線を消す */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #333; /* テキスト色 */
+}
+
+/* ボックスのホバーエフェクト */
+.work-item:hover {
+    transform: translateY(-5px); /* 浮き上がる */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* 影を強調 */
+}
+
+/* 埋め込み表示用のiframe */
+.work-frame {
+    width: 100%; /* ボックス幅にフィット */
+    height: 70%; /* ボックス内で高さを固定 */
+    border: none; /* 枠線を削除 */
+}
+
+/* ボックス内のタイトル */
+.work-item h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    font-weight: bold;
     text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    color: #333;
 }
 
 
@@ -266,6 +292,21 @@ About
 .contact-form button:hover {
     background-color: #673f69; /* ホバー時に背景色を濃く */
 }
+/* フッター全体のスタイル */
+.footer {
+    background-color: #673f69; /* フッターの背景色 */
+    color: #f8f8f8; /* テキスト色 */
+    padding: 10px 0; /* 上下の余白 */
+    text-align: center; /* テキスト中央寄せ */
+    font-size: 0.8rem; /* フォントサイズ */
+}
+
+/* コピーライトのスタイル */
+.footer-copy {
+    margin: 0; /* 余白をリセット */
+    color: #ddd; /* 少し薄い色 */
+}
+
 
 
 
